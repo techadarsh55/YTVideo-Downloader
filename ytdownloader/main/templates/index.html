@@ -1,0 +1,312 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="{% static 'css/style.css'%}" rel="stylesheet">
+    <style type="text/css">
+      
+    </style>
+    <style type="text/css">
+      body{
+        background-image: url('{% static 'img/space.jpg'%}'); 
+        background-size: cover; 
+      }
+      #img1{
+        background-image: url('{% static 'img/start-up.png'%}');
+        height: 18%;
+        background-size: cover;
+        width: 8%;
+        left: 23%;
+        top: 73%;
+        position: absolute;
+        animation: mymove 15s linear infinite;
+        z-index: -2;
+        rotate: 63deg;
+      }
+    @keyframes mymove{
+      0%{
+        width: 0%;
+    background-size: cover;
+    
+    background-image: url('{% static 'img/start-up.png'%}');
+    height: 0%;
+    bottom: 20%;
+    top: 95%;
+     left: 10%; 
+
+      }
+      10%{
+        top:78%;
+        left:15%;
+      }
+      20%{
+        top:73%;
+        left: 25%;
+
+      }  
+      40%{
+          top:65%;
+          left: 35%;
+
+      }  
+      50%{
+        top: 55%;
+        left: 45%;
+      }
+      60%{
+        top:45%;  
+        left: 50%; 
+        /*width: 30%;
+        height: 30%;*/
+
+      }
+      100% { 
+        top:35%;  
+        left: 70%; 
+        
+      }
+    
+    }
+           
+
+      #img2{
+         background-image: url('{% static 'img/meteor.png'%}');
+        height: 6rem;
+        background-size: cover;
+        width: 6rem;
+        top:13%;
+        right: 90px;
+        position: absolute;
+        animation: mymove1 20s infinite;
+        /*animation-direction: alternate;*/
+        z-index: -3;
+      }
+
+      @keyframes mymove1 {
+          
+    0% {
+        
+    width: 0;
+    background-size: cover;
+    background-image: url('{% static 'img/meteor.png'%}');
+    height: 0;
+    top: 5%;
+  }
+  /*10%{
+    width: 5%;
+    height: 5%;
+    top: 10%;
+  }
+  30%{
+    width: 15%;
+    height: 15%;
+    top: 15%;  
+  }
+  
+  50% {
+    width: 25%;
+    height: 25%;
+    top: 20%;
+  }
+  60%{
+    width: 35%;
+    height: 35%;
+    top: 25%;
+
+  }
+  
+  100% {
+    width: 0;
+    top: 0%;
+  }*/
+        }
+
+#img3{
+  background-image: url('{% static 'img/earth2.png'%}');
+        height: 47%;
+        background-size: cover;
+        width:23%;
+        bottom:0 ;
+        left:-4%;
+        top: 62%;
+        position: absolute;
+        animation: earth 5s infinite;
+        /*animation-direction: alternate;*/
+        z-index: -3;
+}
+
+@keyframes earth{
+  0%{
+    /*background-position-y: 1%;*/
+    rotate: 45deg;
+    transform-origin: ;
+  }
+  50%{
+/*    background-position-y: 8%;*/
+    rotate: 50deg;
+    /*transform-origin: 25px 25px;*/
+  }
+  100%{
+    rotate: 55deg;
+    /*background-position-y: 0%;*/
+  }
+}
+
+        @media (max-width: 576px) { 
+          #img1{
+        background-image: url('{% static 'img/start-up.png'%}');
+            height: 5rem;
+    background-size: cover;
+    width: 5rem;
+    left: -13px;
+    top: 36px;
+    position: absolute;
+    animation: mymove 5s infinite;
+    z-index: -3;
+      }
+      #img2{
+         background-image: url('{% static 'img/meteor.png'%}');
+          height: 3rem;
+          background-size: cover;
+          width: 3rem;
+          top: 9%;
+          right: 10px;
+          position: absolute;
+          animation: mymove1 5s infinite;
+          z-index: -3;
+      }
+       @keyframes mymove1 {
+          0%   {
+            top: 10%;
+
+          }
+          25%  {
+            top: 11%;
+          }
+          75%  {top: 12%;}
+          100% {top: 10%;}
+        }
+        #img3{
+  background-image: url('{% static 'img/earth2.png'%}');
+        height: 38%;
+        background-size: cover;
+        width:25%;
+        bottom:0 ;
+        left:-7%;
+        top: 52%;
+        position: absolute;
+        animation: earth 5s infinite;
+        /*animation-direction: alternate;*/
+        z-index: -3;
+}
+
+@keyframes earth{
+  0%{
+    /*background-position-y: 1%;*/
+    rotate: 45deg;
+    transform-origin: ;
+  }
+  50%{
+/*    background-position-y: 8%;*/
+    rotate: 50deg;
+    /*transform-origin: 25px 25px;*/
+  }
+  100%{
+    rotate: 55deg;
+    /*background-position-y: 0%;*/
+  }
+}
+
+         }
+
+      #main{
+        background-image: url('{% static 'img/space.jpg'%}'); 
+        background-size: cover; padding-bottom: 10%; 
+        background-repeat: round;
+    background-attachment: inherit;
+    z-index: 0;
+        position: relative;
+      }
+      .col-sm-8{
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body id="main1">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="{% static 'img/cloud.png'%}" style="width: 25%;margin-right: 6%;">YTVidos</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Create QR Code</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">TextToSpeech</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Download</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-secondary" type="submit"><img src="{% static 'img/search.png'%}" style="width:22px;"></button>
+      </form>
+    </div>
+  </div>
+</nav>
+    </header>
+    
+    <main id="main" style="">
+    
+      <section>
+        <div class="container-fluid">
+          <section>
+          <div id="img1"></div>
+          <div id="img2"></div>
+          <div id="img3"></div>
+          </section>
+          <div class="row">
+            <form method="post">
+              {% csrf_token %}
+            <div class="d-flex" style="justify-content: center;margin-top: 10%; margin-bottom: 13%;">
+              <div class="col-sm-8" style="margin: 5%;">
+                <h3  for="url" style="color:#fff;">YouTube Video Downloader</h3>
+                <div class="input-group">
+                <input type="text" name="url" class="form-control" id="url" placeholder="Paste your video link here" required style="padding: 0px;width: 3rem;text-align: left; padding-left: 23px;border-radius: 22px 0px 0px 22px;">
+                <button type="submit" class="btn space-dark" style="border-radius: 0px 22px 22px 0px;background: #464646;"><img src="{% static 'img/search.png' %}" style="width: 2rem;"></button>
+              </div>
+              </div>
+              
+            </div>
+          </form>
+          </div>
+        </div>
+      </section>
+    </main>
+     <section>
+       <div>
+         <div class="row" style="background:#646464;">
+           xc
+         </div>
+       </div>
+     </section> 
+
+    <footer>
+      
+    </footer>
+
+    <script src="{% static 'js/boot.js'%}"></script>
+    <script src="{% static 'js/p.js'%}"></script>
+  </body>
+</html>
